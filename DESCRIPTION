@@ -13,5 +13,5 @@ LazyLoad: yes
 License: LGPL version 3
 URL: http://www.r-project.org, http://www.coherentlogic.com/wordpress/?page_id=3580
 SystemRequirements:
-Repository: http://r.coherentlogic.com/
+Repository: https://github.com/thospfuller/rbitcoinchartsapi
 Archs: i386, x64
