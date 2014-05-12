@@ -1,6 +1,8 @@
 library ("rbitcoinchartsapi")
 weightedPrices <- GetWeightedPrices ()
-params <- list (currency="USD")
-usd <- GetMarketData (params)
+marketDataParams <- list (currency="USD")
+usd <- GetMarketData (marketDataParams)
 weightedPrices$ILS
 usd[[1]]$latest_trade
+historicTradeDataParams <- list (symbol="btceUSD")
+historicTradeData <- GetHistoricTradeData (historicTradeDataParams)
