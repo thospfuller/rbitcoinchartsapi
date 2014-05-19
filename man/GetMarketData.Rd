@@ -7,8 +7,6 @@
 \arguments{
     params See http://bitcoincharts.com/about/markets-api/ for a list of available parameters.
 }
-\usage{
-    params <- list (currency="USD")
-    usd <- GetMarketData (params)
-    usd[[1]]$latest_trade
+\value{
+    A data frame containing the market data.
 }

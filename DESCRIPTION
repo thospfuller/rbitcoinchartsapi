@@ -8,8 +8,7 @@ Maintainer: Thomas P. Fuller <thomas.fuller@coherentlogic.com>
 Description: An R package for the BitCoinCharts.com API. Note that this package
  is an independent effort and not affiliated with the bitcoincharts.com
  website.
-Imports: RJSONIO, RCurl
-Depends: R (>= 3.0.3), RJSONIO, RCurl
+Depends: R (>= 3.0.1), RJSONIO, RCurl
 SystemRequirements:
 LazyLoad: yes
 License: LGPL-3

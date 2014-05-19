@@ -1,10 +1,10 @@
 ###
 ### install.packages("RCurl", dependencies = TRUE)
 ###
-.onLoad <- function (libname, pkgname) {
-    library("RCurl")
-    library("RJSONIO")
-}
+#.onLoad <- function (libname, pkgname) {
+#    library("RCurl")
+#    library("RJSONIO")
+#}
 
 .onUnload <- function (libpath) {
 }

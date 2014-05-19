@@ -7,6 +7,6 @@
 \arguments{
     None
 }
-\usage{
-    weightedPrices <- GetWeightedPrices ()
+\value{
+    A data frame containing the weighted prices.
 }
