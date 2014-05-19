@@ -11,3 +11,8 @@
 \value{
     A data frame containing the historic trade data.
 }
+\examples{
+    library ("rbitcoinchartsapi")
+    historicTradeDataParams <- list (symbol="btceUSD")
+    historicTradeData <- GetHistoricTradeData (historicTradeDataParams)
+}

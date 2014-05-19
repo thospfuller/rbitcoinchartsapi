@@ -10,3 +10,7 @@
 \value{
     A data frame containing the weighted prices.
 }
+\examples{
+    library ("rbitcoinchartsapi")
+    weightedPrices <- GetWeightedPrices ()
+}

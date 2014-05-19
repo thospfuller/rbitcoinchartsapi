@@ -1,2 +1,0 @@
-library ("rbitcoinchartsapi")
-weightedPrices <- GetWeightedPrices ()

@@ -10,3 +10,10 @@
 \value{
     A data frame containing the market data.
 }
+\examples{
+    library ("rbitcoinchartsapi")
+    marketDataParams <- list (currency="USD")
+    usd <- GetMarketData (marketDataParams)
+    weightedPrices$ILS
+    usd[[1]]$latest_trade
+}
