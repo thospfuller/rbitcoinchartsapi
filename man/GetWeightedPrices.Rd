@@ -13,4 +13,5 @@
 \examples{
     library ("rbitcoinchartsapi")
     weightedPrices <- GetWeightedPrices ()
+    weightedPrices$ILS
 }
