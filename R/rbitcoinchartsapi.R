@@ -61,15 +61,21 @@ GetMarketData <- function (params) {
 ###
 GetHistoricTradeData <- function (params) {
 
+    #
+    # http://api.bitcoincharts.com/v1/trades.csv?symbol=btceUSD
+    #
+
     data <- getForm("http://api.bitcoincharts.com/v1/trades.csv", .params=params)
 
     tempCsvFile <- tempfile(pattern = "historicTradeData", tmpdir = tempdir(), fileext = ".csv")
 
     writtenResult <- write (data, file=tempCsvFile, append=FALSE)
 
-    result <- read.csv (tempCsvFile)
+    results <- read.csv (tempCsvFile, header = FALSE)
 
     unlink (tempCsvFile)
 
-    return (result)
+    colnames (results) <- c("unixtime", "price", "amount")
+
+    return (results)
 }
