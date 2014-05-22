@@ -1,64 +1,62 @@
-###
-### install.packages("RCurl", dependencies = TRUE)
-###
-#.onLoad <- function (libname, pkgname) {
-#    library("RCurl")
-#    library("RJSONIO")
-#}
-
-.onUnload <- function (libpath) {
-}
-
-### Bitcoincharts offers weighted prices for several currencies at
-### http://api.bitcoincharts.com/v1/weighted_prices.json. You can use this to
-### price goods and services in Bitcoins. This will yield much lower
-### fluctuations than using a single market's latest price.
-### Weighted prices are calculated for the last 24 hours, 7 days and 30 days.
-### If there are no trades during an interval (like no trade within 24 hours)
-### no value will be returned.
-###
-### For example:
-###
-### weightedPrices <- GetWeightedPrices ()
-###
+#' Function returns the weighted prices. 
+#'
+#' \href{http://www.bitcoincharts.com}{Bitcoincharts} offers weighted prices
+#' for several currencies that can be used, for example, to price goods and
+#' services in Bitcoins -- this will yield much lower fluctuations than using
+#' a single market's latest price.
+#'
+#' @return Weighted prices are calculated for the last 24 hours, 7 days and 30
+#'  days; if there are no trades during an interval, such as no trade within 24
+#'  hours, then no value will be returned.
+#'
+#' @examples
+#'     weightedPrices <- GetWeightedPrices ()
+#'
+#' @export
+#'
 GetWeightedPrices <- function () {
     data <- getURL("http://api.bitcoincharts.com/v1/weighted_prices.json")
     dataFrame <- RJSONIO::fromJSON(data)
     return (dataFrame)
 }
 
-### You can access general market data at
-### http://api.bitcoincharts.com/v1/markets.json. This will return an array
-### with elements for each market.
-###
-### For example:
-###
-### params <- list (currency="USD")
-###
-### usd <- GetMarketData (params)
-###
+#' General market data can be accessed at \href{http://api.bitcoincharts.com/v1
+#' /markets.json} -- this function will return an array with elements for each
+#' market.
+#'
+#' @param params Any parameter accepted by this web service call -- see \href{
+#'  http://bitcoincharts.com/about/markets-api/}{here}
+#'
+#' @examples
+#'  params <- list (currency="USD")
+#'  usd <- GetMarketData (params)
+#'
+#' @export
+#'
 GetMarketData <- function (params) {
     data <- getForm("http://api.bitcoincharts.com/v1/markets.json", .params=params)
     dataFrame <- RJSONIO::fromJSON(data)
     return (dataFrame)
 }
 
-### Trade data is available as CSV, delayed by approx. 15 minutes. It will
-### return the 2000 most recent trades.
-###
-### For example:
-###
-### params <- list (symbol="btceUSD")
-###
-### historicData <- GetHistoricTradeData (params)
-###
-### Pick one of the symbols from here:
-###
-### http://bitcoincharts.com/markets/
-###
-### Note that calling this function with invalid parameters will result in an
-### empty data frame.
-###
+#' This function will return the 2000 most recent trades which are delayed by
+#' approximately 15 minutes. 
+#'
+#' The symbols that are available can be found \href{http://bitcoincharts.com/
+#' markets/}{here}.
+#'
+#' Note that calling this function with invalid parameters will result in an
+#' empty data frame.
+#'
+#' @param params Any parameter accepted by this web service call -- see \href{
+#'  http://bitcoincharts.com/about/markets-api/}{here}
+#'
+#' @examples
+#'  params <- list (symbol="btceUSD")
+#'  historicData <- GetHistoricTradeData (params)
+#'
+#' @export
+#'
 GetHistoricTradeData <- function (params) {
 
     #
