@@ -20,12 +20,10 @@ GetWeightedPrices <- function () {
     return (dataFrame)
 }
 
-#' General market data can be accessed \href{http://api.bitcoincharts.com/v1
-#' /markets.json}{here} -- this function will return an array with elements for each
-#' market.
+#' General market data can be accessed \href{http://api.bitcoincharts.com/v1/markets.json}{here}.
+#' This function will return an array with elements for each market.
 #'
-#' @param params Any parameter accepted by this web service call -- see \href{
-#'  http://bitcoincharts.com/about/markets-api/}{here}
+#' @param params Any parameter accepted by this web service call -- see \href{http://bitcoincharts.com/about/markets-api/}{here}
 #'
 #' @examples
 #'  params <- list (currency="USD")
@@ -42,14 +40,13 @@ GetMarketData <- function (params) {
 #' This function will return the 2000 most recent trades which are delayed by
 #' approximately 15 minutes. 
 #'
-#' The symbols that are available can be found \href{http://bitcoincharts.com/
-#' markets/}{here}.
+#' The symbols that are available can be found \href{http://bitcoincharts.com/markets/}{here}.
 #'
 #' Note that calling this function with invalid parameters will result in an
 #' empty data frame.
 #'
-#' @param params Any parameter accepted by this web service call -- see \href{
-#'  http://bitcoincharts.com/about/markets-api/}{here}
+#' @param params Any parameter accepted by this web service call -- see
+#' \href{http://bitcoincharts.com/about/markets-api/}{here}.
 #'
 #' @examples
 #'  params <- list (symbol="btceUSD")
