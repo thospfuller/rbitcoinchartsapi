@@ -1,5 +1,0 @@
-import(RJSONIO)
-import(RCurl)
-export(GetWeightedPrices)
-export(GetMarketData)
-export(GetHistoricTradeData)

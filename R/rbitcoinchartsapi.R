@@ -1,3 +1,7 @@
+#' @import RJSONIO RCurl
+#'
+NULL
+
 #' Function returns the weighted prices. 
 #'
 #' \href{http://www.bitcoincharts.com}{Bitcoincharts} offers weighted prices
