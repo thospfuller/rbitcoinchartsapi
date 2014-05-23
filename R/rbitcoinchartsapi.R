@@ -10,7 +10,7 @@
 #'  hours, then no value will be returned.
 #'
 #' @examples
-#'     weightedPrices <- GetWeightedPrices ()
+#'  weightedPrices <- GetWeightedPrices ()
 #'
 #' @export
 #'
@@ -20,8 +20,8 @@ GetWeightedPrices <- function () {
     return (dataFrame)
 }
 
-#' General market data can be accessed at \href{http://api.bitcoincharts.com/v1
-#' /markets.json} -- this function will return an array with elements for each
+#' General market data can be accessed \href{http://api.bitcoincharts.com/v1
+#' /markets.json}{here} -- this function will return an array with elements for each
 #' market.
 #'
 #' @param params Any parameter accepted by this web service call -- see \href{
