@@ -2,7 +2,7 @@
 #'
 NULL
 
-#' Function returns the weighted prices. 
+#' This function returns the weighted prices. 
 #'
 #' \href{http://www.bitcoincharts.com}{Bitcoincharts} offers weighted prices
 #' for several currencies that can be used, for example, to price goods and
@@ -24,8 +24,9 @@ GetWeightedPrices <- function () {
     return (dataFrame)
 }
 
-#' General market data can be accessed \href{http://api.bitcoincharts.com/v1/markets.json}{here}.
 #' This function will return an array with elements for each market.
+#'
+#' General market data can be accessed \href{http://api.bitcoincharts.com/v1/markets.json}{here}.
 #'
 #' @param params Any parameter accepted by this web service call -- see \href{http://bitcoincharts.com/about/markets-api/}{here}
 #'
