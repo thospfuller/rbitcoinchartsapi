@@ -14,7 +14,19 @@ NULL
 #'  hours, then no value will be returned.
 #'
 #' @examples
-#'  weightedPrices <- GetWeightedPrices ()
+#'  tryCatch(
+#'      weightedPrices <- GetWeightedPrices (),
+#'      Throwable =
+#'          function (e) {    
+#'              print (
+#'                  paste (
+#'                      "An exception was thrown -- details follow.",
+#'                      e$getMessage(),
+#'                      sep=""
+#'                  )
+#'              )
+#'          }
+#'      )
 #'
 #' @export
 #'
@@ -32,7 +44,19 @@ GetWeightedPrices <- function () {
 #'
 #' @examples
 #'  params <- list (currency="USD")
-#'  usd <- GetMarketData (params)
+#'  tryCatch(
+#'      usd <- GetMarketData (params),
+#'      Throwable =
+#'          function (e) {    
+#'              print (
+#'                  paste (
+#'                      "An exception was thrown -- details follow.",
+#'                      e$getMessage(),
+#'                      sep=""
+#'                  )
+#'              )
+#'          }
+#'      )
 #'
 #' @export
 #'
@@ -55,7 +79,21 @@ GetMarketData <- function (params) {
 #'
 #' @examples
 #'  params <- list (symbol="btceUSD")
-#'  historicData <- GetHistoricTradeData (params)
+#'  tryCatch(
+#'      historicTradeData <- GetHistoricTradeData (params),
+#'      Throwable =
+#'          function (e) {    
+#'              print (
+#'                  paste (
+#'                      "An exception was thrown -- details follow.",
+#'                      e$getMessage(),
+#'                      sep=""
+#'                  )
+#'              )
+#'          }
+#'      )
+#'
+#'  head (historicTradeData)
 #'
 #' @export
 #'
