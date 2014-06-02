@@ -93,8 +93,6 @@ GetMarketData <- function (params) {
 #'          }
 #'      )
 #'
-#'  head (historicTradeData)
-#'
 #' @export
 #'
 GetHistoricTradeData <- function (params) {
