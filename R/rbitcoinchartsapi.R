@@ -16,12 +16,12 @@ NULL
 #' @examples
 #'  tryCatch(
 #'      weightedPrices <- GetWeightedPrices (),
-#'      Throwable =
+#'      error =
 #'          function (e) {    
 #'              print (
 #'                  paste (
-#'                      "An exception was thrown -- details follow.",
-#'                      e$getMessage(),
+#'                      "An exception was thrown -- details follow: ",
+#'                      e,
 #'                      sep=""
 #'                  )
 #'              )
@@ -46,12 +46,12 @@ GetWeightedPrices <- function () {
 #'  params <- list (currency="USD")
 #'  tryCatch(
 #'      usd <- GetMarketData (params),
-#'      Throwable =
+#'      error =
 #'          function (e) {    
 #'              print (
 #'                  paste (
-#'                      "An exception was thrown -- details follow.",
-#'                      e$getMessage(),
+#'                      "An exception was thrown -- details follow: ",
+#'                      e,
 #'                      sep=""
 #'                  )
 #'              )
@@ -81,12 +81,12 @@ GetMarketData <- function (params) {
 #'  params <- list (symbol="btceUSD")
 #'  tryCatch(
 #'      historicTradeData <- GetHistoricTradeData (params),
-#'      Throwable =
+#'      error =
 #'          function (e) {    
 #'              print (
 #'                  paste (
-#'                      "An exception was thrown -- details follow.",
-#'                      e$getMessage(),
+#'                      "An exception was thrown -- details follow: ",
+#'                      e,
 #'                      sep=""
 #'                  )
 #'              )

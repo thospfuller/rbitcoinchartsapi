@@ -1,7 +1,7 @@
 Package: rbitcoinchartsapi
 Type: Package
 Title: R Package for the BitCoinCharts.com API
-Version: 1.0.3
+Version: 1.0.4
 Date: 2014-08-06
 Author: Thomas P. Fuller <thomas.fuller@coherentlogic.com>
 Maintainer: Thomas P. Fuller <thomas.fuller@coherentlogic.com>

@@ -14,3 +14,7 @@ o Examples have been improved.
 
 Version: 1.0.3 [2014-08-06]
 o One example has changed so as to prevent a possible null pointer exception.
+
+
+Version: 1.0.4 [2014-14-06]
+o Fixed a minor issue with several tryCatch statements.
