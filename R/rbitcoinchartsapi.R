@@ -1,5 +1,15 @@
+#' 
+#' @title R Bitcoin Charts API Package
+#' 
+#' @details This package provides functions for acquiring data directly from \href{http://www.bitcoincharts.com}{Bitcoincharts}. 
+#'
+#' @description This package provides functions for acquiring data directly from \href{http://www.bitcoincharts.com}{Bitcoincharts}.
 #'
 #' @import RJSONIO RCurl
+#'
+#' @name rbitcoinchartsapi
+#'
+#' @docType package
 #'
 NULL
 
