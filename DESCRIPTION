@@ -1,7 +1,7 @@
 Package: rbitcoinchartsapi
 Type: Package
 Title: R Package for the BitCoinCharts.com API
-Version: 1.0.4
+Version: 1.0.5
 Date: 2014-08-06
 Author: Thomas P. Fuller <thomas.fuller@coherentlogic.com>
 Maintainer: Thomas P. Fuller <thomas.fuller@coherentlogic.com>
@@ -15,6 +15,8 @@ LazyLoad: yes
 License: LGPL-3
 Copyright: (C) 2014 Coherent Logic Limited; ALL RIGHTS RESERVED.
 URL: http://www.r-project.org,
-    http://www.coherentlogic.com/wordpress/?page_id=3580&source=cran
+    https://github.com/thospfuller/rbitcoinchartsapi,
+    https://coherentlogic.com/middleware-development/r-package-for-the-bitcoincharts-com-api?source=cran
 Repository: https://github.com/thospfuller/rbitcoinchartsapi
 Archs: i386, x64
+Encoding: UTF-8
