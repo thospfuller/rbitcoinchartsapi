@@ -15,9 +15,8 @@ SystemRequirements:
 LazyLoad: yes
 License: LGPL-3
 Copyright: (C) 2014 Coherent Logic Limited; ALL RIGHTS RESERVED.
-URL: http://www.r-project.org,
-    https://github.com/thospfuller/rbitcoinchartsapi,
-    https://coherentlogic.com/middleware-development/r-package-for-the-bitcoincharts-com-api?source=cran
+URL: https://github.com/thospfuller/rbitcoinchartsapi,
+    https://coherentlogic.com/middleware-development/r-package-for-the-bitcoincharts-com-api/?source=cran
 Repository: https://github.com/thospfuller/rbitcoinchartsapi
 Archs: i386, x64
 Encoding: UTF-8
