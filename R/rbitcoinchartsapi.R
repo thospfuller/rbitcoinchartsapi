@@ -1,3 +1,4 @@
+#'
 #' @import RJSONIO RCurl
 #'
 NULL
@@ -78,7 +79,7 @@ GetMarketData <- function (params) {
 #' \href{http://bitcoincharts.com/about/markets-api/}{here}.
 #'
 #' @examples
-#'  params <- list (symbol="btceUSD")
+#'  params <- list (symbol="bitstampUSD")
 #'  tryCatch(
 #'      historicTradeData <- GetHistoricTradeData (params),
 #'      error =
@@ -98,7 +99,10 @@ GetMarketData <- function (params) {
 GetHistoricTradeData <- function (params) {
 
     #
-    # http://api.bitcoincharts.com/v1/trades.csv?symbol=btceUSD
+    # http://api.bitcoincharts.com/v1/trades.csv?symbol=bitstampUSD
+    #
+    # params <- list (symbol="krakenEUR", start=1303100000)
+    # historicTradeData <- GetHistoricTradeData (params)
     #
 
     data <- getForm("http://api.bitcoincharts.com/v1/trades.csv", .params=params)
@@ -107,7 +111,7 @@ GetHistoricTradeData <- function (params) {
 
     writtenResult <- write (data, file=tempCsvFile, append=FALSE)
 
-    results <- read.csv (tempCsvFile, header = FALSE)
+    results <- utils::read.csv (tempCsvFile, header = FALSE)
 
     unlink (tempCsvFile)
 
