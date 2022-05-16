@@ -9,7 +9,8 @@ Description: An R package for the BitCoinCharts.com API.
 Depends:
     R (>= 4.2.0),
     RJSONIO,
-    RCurl
+    RCurl,
+    logging
 SystemRequirements: 
 LazyLoad: yes
 License: LGPL-3

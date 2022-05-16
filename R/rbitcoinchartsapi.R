@@ -5,7 +5,7 @@
 #'
 #' @description This package provides functions for acquiring data directly from \href{http://www.bitcoincharts.com}{Bitcoincharts}.
 #'
-#' @import RJSONIO RCurl
+#' @import RJSONIO RCurl logging
 #'
 #' @name rbitcoinchartsapi
 #'
@@ -42,8 +42,14 @@ NULL
 #' @export
 #'
 GetWeightedPrices <- function () {
+  
+    logging::logdebug("GetWeightedPrices: function begins.")
+  
     data <- getURL("http://api.bitcoincharts.com/v1/weighted_prices.json")
     dataFrame <- RJSONIO::fromJSON(data)
+    
+    logging::logdebug("GetWeightedPrices: function ends.")
+    
     return (dataFrame)
 }
 
@@ -72,8 +78,14 @@ GetWeightedPrices <- function () {
 #' @export
 #'
 GetMarketData <- function (params) {
+  
+    logging::logdebug("GetMarketData: function begins.")
+  
     data <- getForm("http://api.bitcoincharts.com/v1/markets.json", .params=params)
     dataFrame <- RJSONIO::fromJSON(data)
+    
+    logging::logdebug("GetMarketData: function ends.")
+    
     return (dataFrame)
 }
 
@@ -108,6 +120,8 @@ GetMarketData <- function (params) {
 #'
 GetHistoricTradeData <- function (params) {
 
+    logging::logdebug("GetHistoricTradeData: function begins.")
+  
     #
     # http://api.bitcoincharts.com/v1/trades.csv?symbol=bitstampUSD
     #
@@ -127,5 +141,7 @@ GetHistoricTradeData <- function (params) {
 
     colnames (results) <- c("unixtime", "price", "amount")
 
+    logging::logdebug("GetHistoricTradeData: function ends")
+    
     return (results)
 }
