@@ -7,7 +7,7 @@ Author: Thomas P. Fuller <thomas.fuller@coherentlogic.com>
 Maintainer: Thomas P. Fuller <thomas.fuller@coherentlogic.com>
 Description: An R package for the BitCoinCharts.com API.
 Depends:
-    R (>= 3.0.3),
+    R (>= 4.2.0),
     RJSONIO,
     RCurl
 SystemRequirements: 
