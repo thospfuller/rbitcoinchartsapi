@@ -14,4 +14,4 @@ Calling this function with invalid parameters will result in an empty data frame
     with(historicTradeData, plot(unixtime, price))
     head(historicTradeData)
 
-![The rbitcoinchartsapi GetHistoricTradeData function in action!](/images/rproject-rbitcoinchartsapi-package-gethistorictradedata-example.jpg "The rbitcoinchartsapi GetHistoricTradeData function in action")
+![The rbitcoinchartsapi GetHistoricTradeData function in action!](https://github.com/thospfuller/rbitcoinchartsapi/blob/master/images/rproject-rbitcoinchartsapi-package-gethistorictradedata-example.png?raw=true "The rbitcoinchartsapi GetHistoricTradeData function in action")
