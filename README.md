@@ -4,7 +4,9 @@
 
 ## Example 1: Introduction to the GetHistoricTradeData function
 
-This function will return the 2000 most recent trades which are delayed by approximately 15 minutes. The [symbols that are available can be found here](http://bitcoincharts.com/markets/).
+The GetHistoricTradeData function will return the 2000 most recent trades which are delayed by approximately 15 minutes.
+
+The [symbols that are available can be found here](http://bitcoincharts.com/markets/).
 
 Calling this function with invalid parameters will result in an empty data frame.
 
@@ -15,3 +17,23 @@ Calling this function with invalid parameters will result in an empty data frame
     head(historicTradeData)
 
 ![The rbitcoinchartsapi GetHistoricTradeData function in action!](https://github.com/thospfuller/rbitcoinchartsapi/blob/master/images/rproject-rbitcoinchartsapi-package-gethistorictradedata-example.png?raw=true "The rbitcoinchartsapi GetHistoricTradeData function in action")
+
+## Example 2: Introduction to the GetWeightedPrices function
+
+The GetWeightedPrices function returns the weighted prices. 
+
+[Bitcoincharts.com](http://www.bitcoincharts.com) offers weighted prices for several currencies that can be used, for example, to price goods and services in Bitcoins -- this will yield much lower fluctuations than using a single market's latest price.
+
+Weighted prices are calculated for the last 24 hours, 7 days and 30 days; if there are no trades during an interval, such as no trade within 24 hours, then no value will be returned.
+
+    weightedPrices <- GetWeightedPrices ()
+    head(weightedPrices)
+
+![The rbitcoinchartsapi GetWeightedPrices function in action!](https://github.com/thospfuller/rbitcoinchartsapi/blob/master/images/rproject-rbitcoinchartsapi-package-getweightedprices-example.png?raw=true "The rbitcoinchartsapi GetWeightedPrices function in action")
+
+## Example 3: Introduction to the GetMarketData function
+
+The GetMarketData function will return an array with elements for each market.
+
+The [symbols that are available can be found here](http://bitcoincharts.com/markets/).
+
