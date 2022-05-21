@@ -2,6 +2,16 @@
 
 # rbitcoinchartsapi: An R Package for the Bitcoincharts.com API
 
+## Installing the rbitcoinchartsapi package from Drat
+
+The following example demonstrates how to install the rbitcoinchartsapi from the [Drat repository located on GitHub](https://github.com/thospfuller/drat).
+
+    install.packages(c("drat", "logging", "RJSONIO", "RCurl"))
+    drat::addRepo("thospfuller")
+    install.packages("rbitcoinchartsapi", type = "source")
+
+Next we'll explore several examples that demonstrate how to use the various functions available in this package.
+
 ## Example 1: Introduction to the GetHistoricTradeData function
 
 The GetHistoricTradeData function will return the 2000 most recent trades which are delayed by approximately 15 minutes.
