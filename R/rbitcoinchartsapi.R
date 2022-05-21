@@ -6,7 +6,7 @@
 #' @description This package provides functions for acquiring data directly from \href{http://www.bitcoincharts.com}{Bitcoincharts}.
 #'
 #' @import RJSONIO RCurl logging
-#' @importFrom("utils", "read.csv")
+#' @importFrom utils read.csv
 #'
 #' @name rbitcoinchartsapi
 #'
@@ -116,6 +116,7 @@ GetMarketData <- function (params) {
 #'              )
 #'          }
 #'      )
+#'  with(historicTradeData, plot(unixtime, price))
 #'
 #' @export
 #'
