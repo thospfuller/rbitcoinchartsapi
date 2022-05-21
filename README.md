@@ -37,3 +37,4 @@ The GetMarketData function will return an array with elements for each market.
 
 The [symbols that are available can be found here](http://bitcoincharts.com/markets/).
 
+![The rbitcoinchartsapi GetMarketData function in action!](https://github.com/thospfuller/rbitcoinchartsapi/blob/master/images/rproject-rbitcoinchartsapi-package-getmarketdata-example.png?raw=true "The rbitcoinchartsapi GetMarketData function in action")
